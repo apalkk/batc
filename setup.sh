@@ -36,11 +36,11 @@ fi
 
 # Delete the repository directory
 cd $CURRENT_DIR
-cd ..
-REPO_DIR=$(basename "${CURRENT_DIR}")
-rm -rf "${REPO_DIR}"
 
 # Delete this setup script
 rm -f "${CURRENT_DIR}/setup_batc.sh"
 
+cd ..
+REPO_DIR=$(basename "${CURRENT_DIR}")
+rm -rf "${REPO_DIR}"
 echo "Setup complete and cleanup done. You can now use the 'batc' command."
