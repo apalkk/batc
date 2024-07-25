@@ -35,7 +35,7 @@ else
 fi
 
 # Delete the repository directory
-cd "${CURRENT_DIR}/.."
+cd ".."
 REPO_DIR=$(basename "${CURRENT_DIR}")
 rm -rf "${REPO_DIR}"
 
