@@ -44,3 +44,5 @@ cd ..
 REPO_DIR=$(basename "${CURRENT_DIR}")
 rm -rf "${REPO_DIR}"
 echo "Setup complete and cleanup done. You can now use the 'batc' command."
+cd ..
+rm -rf batc
