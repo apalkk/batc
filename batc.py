@@ -15,8 +15,11 @@ partition_acc_name = re.search(r"^nexus([a-zA-Z]+)", socket.getfqdn()).group(1)
 def batc():
     """
     A quick and dirty way to use slurm without much effort. Defaults are set to fit the CLIP Lab in UMIACS, but it should be generalizable for all lab partitions.
+    
     For official UMIACS documentation: https://wiki.umiacs.umd.edu/umiacs/index.php/Main_Page
+    
     For more detailed SLURM commands: https://docs.rc.fas.harvard.edu/kb/convenient-slurm-commands/
+    
     For detailed fairshare calculations: https://github.com/fasrc/scalc
     """
     pass
