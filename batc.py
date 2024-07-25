@@ -25,7 +25,10 @@ def batc():
 @batc.command()
 def setup():
     """
-    Setup
+    Set up the environment by installing necessary packages and modifying .bashrc.
+    
+    This command installs conda and modifies the .bashrc file to add useful aliases
+    and environment variables. It also ensures the setup is only performed once.
     """
     if os.getenv("BATC_SETUP") == "true":
         click.echo("Setup has already been completed")
