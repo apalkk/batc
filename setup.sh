@@ -34,4 +34,12 @@ else
     echo "Neither .bashrc nor .zshrc found. Please create one and add the alias manually."
 fi
 
-echo "Setup complete. You can now use the 'batc' command."
+# Delete the repository directory
+cd "${CURRENT_DIR}/.."
+REPO_DIR=$(basename "${CURRENT_DIR}")
+rm -rf "${REPO_DIR}"
+
+# Delete this setup script
+rm -f "${CURRENT_DIR}/setup_batc.sh"
+
+echo "Setup complete and cleanup done. You can now use the 'batc' command."
