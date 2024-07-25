@@ -158,6 +158,17 @@ conda activate {conda_env}
         for line in lines_to_add:
             log_file.write(str(line) + "\n")
 
+@batc.command()
+def clear():
+    """
+    Delete all .data and .log files in the current directory.
+    """
+    for file in os.listdir('.'):
+        if file.endswith(".data") or file.endswith(".log"):
+            os.remove(file)
+            click.echo(f"Deleted {file}")
+
+
 
 if __name__ == '__main__':
     batc()
