@@ -44,6 +44,11 @@ def setup():
         "export BATC_SETUP=true"
     ]
 
+    os.system("wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh")
+    os.system("bash ~/miniconda.sh -b -p $HOME/miniconda")
+    os.system("export PATH=\"$HOME/miniconda/bin:$PATH\"")
+    os.system("conda init")
+    
     bashrc_path = os.path.expanduser("~/.bashrc")
 
     with open(bashrc_path, 'a') as bashrc:
